@@ -1,0 +1,339 @@
+// Global variables
+// =============================================================================
+
+$black:           #000 !default;
+$white:           #fff !default;
+
+$gray-darker:     lighten($black, 13.5%) !default; // #222
+$gray-dark:       lighten($black, 20%)   !default; // #333
+$gray:            #666                   !default;// #666
+$gray-light:      lighten($black, 60%)   !default;// #999
+$gray-lighter:    lighten($black, 93.5%) !default;// #eee
+$gray-text:       #757575;
+$gray-bg: #f5f5f5;
+//$gray-bg: #f7f7f7;
+$headerBg: #fff;
+$headerHeight: 70px;
+
+$footerHeight: 170px;
+$footerBg: #fff;
+
+$personalSidebarBg: #293038;
+$personalSideBarWidth: 180px;
+$personalTopBg: #09c;
+$global-blue: #09c;
+
+$gray_dark: #2b2b2b;
+$gray_light: #787878;
+
+// global Colors
+// -----------------------------------------------------------------------------
+
+$global-primary:	    #1A5AA7;
+$global-secondary:    lighten($global-primary, 15%);
+$global-success:	    #d70c19; // #53D76A; //#5cb85c;
+$global-warning:	    #F37B1D; // #FD9426; // #f0ad4e;
+$global-danger:		    #dd514c; // #FC3159; //#da314b;
+$global-info:         $global-secondary;
+$assertive: $global-primary;
+$global-red:            #f14a4a;
+//阴影颜色
+$shadow-color:#b7b7b7;
+
+$global-primary: $global-success;
+$global-secondary: #ffeded;
+
+
+// body
+// -----------------------------------------------------------------------------
+
+$body-bg:               $white;
+$text-color:            $gray-dark;
+
+
+
+// Links
+// -----------------------------------------------------------------------------
+
+$link-color:              $global-primary;
+$link-hover-color:        darken($link-color, 15%);
+$link-color-blue:         #12B1FF;
+
+$global-contrast-color:	  $white;
+
+
+// Backgrounds & Borders
+// -----------------------------------------------------------------------------
+
+$global-background:				$white;
+$global-border:				    #d7dde4;
+$gray-background:               #f0f0f0;
+$global-disabled:               silver;
+
+// Typography
+// =============================================================================
+
+// Font family
+// -----------------------------------------------------------------------------
+
+$font-family-sans-serif: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans","wenquanyi micro hei","Hiragino Sans GB", "Hiragino Sans GB W3", "FontAwesome", sans-serif;
+
+$font-family-serif: Georgia, "Times New Roman", Times, SimSun, "FontAwesome", serif; //FangSong, STFangSong
+
+$font-family-monospace: Monaco, Menlo, Consolas, "Courier New", "FontAwesome", monospace;
+
+$font-family-kai: Georgia, "Times New Roman", Times, Kai, "Kaiti SC", KaiTi, BiauKai, "FontAwesome", serif;
+
+
+// Font  size
+// -----------------------------------------------------------------------------
+
+$global-font-size:				1.6rem; //16px
+$global-line-height:			1.6;
+$font-size-base:          $global-font-size;
+
+
+
+$font-size-xxxs:           $global-font-size - 0.8; // 8px
+$font-size-xxs:           $global-font-size - 0.6; // 10px - 1rem
+$font-size-xs:            $global-font-size - 0.4; // 12px
+$font-size-sm:            $global-font-size - 0.2; // 14px
+$font-size-default:     $global-font-size;       // 16px
+$font-size-lg:            $global-font-size + 0.2; // 18px
+$font-size-xl:            $global-font-size + 0.8; // 24px
+$font-size-xxl:           $global-font-size * 2;   // 32px
+$font-size-xxxl:          $global-font-size * 2 + 1; // 42px
+
+
+// Global spacing
+// =============================================================================
+
+$global-spacing:                1rem;    //10px
+
+$global-spacing-sm:             0.5rem;    // 5px
+$global-spacing-lg:             $global-spacing + .5;  //15px
+$global-spacing-xl:             $global-spacing-lg + .5;  //20px
+
+
+// Margin
+// -----------------------------------------------------------------------------
+
+$global-margin:								  $global-spacing;
+
+$global-margin-sm:							  $global-spacing-sm;
+
+$global-margin-lg:							  $global-spacing-lg;
+$global-margin-xl:							  $global-spacing-xl;
+
+
+// Border radius
+// -----------------------------------------------------------------------------
+
+$global-radius:         0;
+$radius-xxs:            1px  ;   //1
+$radius-xs:             2px;      //2
+$radius-sm:             3px;      //3
+$radius-lg:             4px;     //4
+$radius-xl:             5px;     //5
+
+
+
+
+// Responsive variables
+// =============================================================================
+
+// Breakpoint
+// -----------------------------------------------------------------------------
+
+$breakpoint-small:            640px;  // 0 - 640px
+$breakpoint-medium:           1024px; // 641 - 1024px
+$breakpoint-large:            1280px; // 1025 - 1280px
+$breakpoint-xl:               1440px; // 1281 - 1440px
+$breakpoint-xxl:              1920px; // 1441 -1920px
+
+$breakpoint-small-max:        $breakpoint-small;
+$breakpoint-md:               $breakpoint-small-max; // legacy var, DO NOT USE IT
+
+$breakpoint-medium-min:       ($breakpoint-small + 1);
+$breakpoint-medium-max:       $breakpoint-medium;
+
+$breakpoint-large-min:        ($breakpoint-medium + 1);
+$breakpoint-large-max:        $breakpoint-large;
+
+$breakpoint-xl-min:           ($breakpoint-large + 1);
+$breakpoint-xl-max:           $breakpoint-xl;
+
+$breakpoint-xxl-min:          ($breakpoint-xl + 1);
+$breakpoint-xxl-max:          $breakpoint-xxl;
+
+
+// Grid system
+// -----------------------------------------------------------------------------
+
+$grid-columns:              12;
+$grid-gutter:               1rem;   // Columns padding
+$grid-gutter-md:            1.5rem; // 15px
+$grid-max-width:            1000px;
+
+
+// =============================================================================
+// Z-index
+// =============================================================================
+
+$global-z-index:		        0;
+$z-index-xxs:                   $global-z-index + 5; //5
+$z-index-xs:                    $z-index-xxs + 5;  //10
+$z-index-sm:                    $z-index-xs + 5;  //15
+$z-index-lg:                    $z-index-sm + 5;  //20
+$z-index-xl:                    $z-index-lg + 5; //25
+$z-index-xxl:                   $z-index-xl + 5;  //30
+
+
+
+// Base
+// =============================================================================
+
+$base-background:							$global-background;
+$base-font-family:					  $font-family-sans-serif;
+$base-font-weight:						normal;
+$base-font-size:							$global-font-size;
+$base-line-height:						$global-line-height;
+$base-text-color:						  $gray-dark;
+
+// em element
+$base-em-color:									#D05;
+
+// ins element
+$base-ins-background:						#ffa;
+$base-ins-color:								$gray-dark;
+
+// mark element
+$base-mark-background:					#ffa;
+$base-mark-color:								$gray-dark;
+
+// selection
+$base-selection-background:			$global-primary;
+$base-selection-color:					$white;
+
+$base-margin-vertical:					$global-spacing;
+
+// h1 - h6 element
+$base-heading-font-weight:				  600;
+$base-heading-margin-top:						2em;
+
+// hr
+$base-hr-border:								$gray-lighter;
+
+// blockquote
+$base-blockquote-border:						  $global-border;
+$base-blockquote-small-color:					$gray-light;
+$base-blockquote-font-size:						1.6rem; // 16px
+$base-blockquote-line-height:					1.5; // 22px
+
+
+// =============================================================================
+// Buttons
+// =============================================================================
+
+$btn-font-weight:                normal;
+$btn-line-height:                1.2;
+$btn-font-size:                  $global-font-size;
+
+$btn-default-color:              #444;
+$btn-default-bg:                 #e6e6e6;
+$btn-default-border:             $btn-default-bg;
+
+$btn-primary-color:              #fff;
+$btn-primary-bg:                 $global-primary;
+$btn-primary-border:             $btn-primary-bg;
+
+$btn-secondary-color:            #fff;
+$btn-secondary-bg:               $global-secondary;
+$btn-secondary-border:           $global-secondary;
+
+$btn-success-color:              #fff;
+$btn-success-bg:                 $global-success;
+$btn-success-border:             $global-success;
+
+$btn-warning-color:              #fff;
+$btn-warning-bg:                 $global-warning;
+$btn-warning-border:             $btn-warning-bg;
+
+$btn-danger-color:               #fff;
+$btn-danger-bg:                  $global-danger;
+$btn-danger-border:              $btn-danger-bg;
+
+$btn-link-disabled-color:        $gray-light;
+
+$btn-xs-font-size:      $font-size-xs;
+$btn-sm-font-size:      $font-size-sm;
+$btn-lg-font-size:      $font-size-lg;
+$btn-xl-font-size:      2rem;
+
+
+// =============================================================================
+// Code variables
+// =============================================================================
+
+$code-color:                  #c7254e;
+$code-bg:                     #f8f8f8;
+$code-font-size:              1.3rem;
+
+$pre-bg:                      $code-bg;
+$pre-color:                   $gray;
+$pre-border:                  1px solid #dedede;
+$pre-scrollable-max-height:   24rem;
+
+
+$checkbox-icon-width:                 18px;
+$checkbox-icon-height:                $checkbox-icon-width;
+
+// =============================================================================
+// Badge variables
+// =============================================================================
+
+$badge-bg:                 $global-primary;
+
+// Highlight color
+$highlight-border-color:       $global-primary;
+
+
+// =============================================================================
+// Icon variables
+// =============================================================================
+$icon-width-xxxxs: 							  16px;
+$icon-height-xxxxs:                         $icon-width-xxxxs;
+
+$icon-width-xxxs: 							  18px;
+$icon-height-xxxs:                          $icon-width-xxxs;
+
+$icon-width-xxs: 							  20px;
+$icon-height-xxs: 							$icon-width-xxs;
+
+$icon-width-xs: 							  23px;
+$icon-height-xs: 							$icon-width-xs;
+
+$icon-width-sm: 							  25px;
+$icon-height-sm: 							$icon-width-sm;
+
+$icon-width-lg: 							  30px;
+$icon-height-lg: 							$icon-width-lg;
+
+$icon-width-xl: 							  40px;
+$icon-height-xl: 							$icon-width-xl;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

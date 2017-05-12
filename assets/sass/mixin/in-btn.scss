@@ -1,0 +1,29 @@
+@mixin in-btn-default( $style,$width,$color ) {
+  border-radius: $radius-sm;
+
+  border: {
+    style: $style;
+    width: $width;
+    color: $color;
+  }
+}
+
+
+@mixin in-btn-hightlight( $style,$width, $color )  {
+  @include in-btn-default( $style, $width, $color )
+}
+
+
+@mixin in-btn-primary( $color, $bgColor, $borderColor) {
+  color: $color;
+  background-color: $bgColor;
+  border: none;
+  border-color: $bgColor;
+  border-radius: $radius-sm;
+}
+
+@mixin in-button( $padding, $padding ) {
+  padding: $padding $padding;
+}
+
+
