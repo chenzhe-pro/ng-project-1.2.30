@@ -148,19 +148,18 @@ var serviceFunction=function(){
             }
         });
     };
-    this.userId=$.cookie("userId");
-    this.name=decodeURI($.cookie("name"));
+    this.userId=quicker.getCookie("userId");
+    this.name=decodeURI(quicker.getCookie("name"));
     this.menuList=[];
 };
 
 
 var locationUrl = window.location.host;
-// console.log("http://"+locationUrl);
 var index_searchData=
         //"http://192.168.0.56:8080/search/cralwer";
         "../data/search.json",
     searchData="http://"+locationUrl;
-
+$(function(){ $('input, textarea').placeholder(); });
 //分类构建app
 var app,url=window.location.href;
 if(url.indexOf("login.html")<0)

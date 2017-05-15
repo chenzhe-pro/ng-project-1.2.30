@@ -705,6 +705,6 @@
   width: 100%;
 }
 
-[v-cloak] {
+[v-cloak],[ng-cloak] {
   display: none;
 }

@@ -2,7 +2,7 @@
         "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <title>Title</title>
+    <title>后台管理系统</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
@@ -21,67 +21,33 @@
     <script src="../../assets/lib/angular-all-jquery.min.js"></script>
     <script src="../../assets/lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="../../assets/lib/placeholder/2.3.1/jquery.placeholder.min.js"></script>
+    <link rel="stylesheet" href="../../assets/css/index.css">
 </head>
-<body ng-app="app">
-    <div ng-controller="head_controller">
-        <div test name="name"></div>
-        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-            开始演示模态框
-        </button>
-        <div class="dropdown">
-            <a data-toggle="dropdown" href="javascript:;">下拉菜单（Dropdown）触发器</a>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                <li><a href="#">qqqq</a></li>
-                <li><a href="#">qqqq</a></li>
-                <li><a href="#">qqqq</a></li>
-                <li><a href="#">qqqq</a></li>
-                <li><a href="#">qqqq</a></li>
-            </ul>
+<body ng-app="app" >
+    <div head ><b>scsaaa</b></div>
+    <div menu></div>
+    <div ng-controller="index_controller">
+        <div class="content_head clearfix">
+            <div class="content_head_title">
+                <div class="icon_area"><span class="glyphicon glyphicon-th"></span></div>
+                <div class="text_title">
+                    <p>撒上点萨达</p>
+                </div>
+                <div class="fr">
+                    <a type="button" class="btn btn-primary btn-sm" href="javascript:;">筛选条件</a>
+                </div>
+            </div>
         </div>
-        <a href="#" class="tooltip_btn">请悬停在我的上面</a>
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title" id="myModalLabel" ng-bind="name">模态框（Modal）标题</h4>
-                    </div>
-                    <div class="modal-body">在这里添加一些文本</div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                        <button type="button" class="btn btn-primary">提交更改</button>
-                    </div>
-                </div><!-- /.modal-content -->
-            </div><!-- /.modal -->
+        <div class="content_content">
+            adadasdas
         </div>
     </div>
-    <div head name="chenzhe" my-id="aaaa"></div>
-    <div class="btn-group" role="group" aria-label="...">
-        <button type="button" class="btn btn-default">1</button>
-        <button type="button" class="btn btn-default">2</button>
-
-        <div class="btn-group" role="group">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
-                <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu">
-                <li><a href="#">Dropdown link</a></li>
-                <li><a href="#">Dropdown link</a></li>
-            </ul>
-        </div>
-    </div>
-    <button type="button" class="btn btn-default btn-lg">
-        <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Star
-    </button>
-    <script>
-//        $('.a').popover({html:true,})
-//        $(function () { $("[data-toggle='popover']").popover({html:true}); });
-    </script>
+    <div foot></div>
 </body>
 <script src="../../assets/lib/quicker-origin.js"></script>
 <script src="../../assets/js/common/common.js"></script>
 <script src="../../assets/components/common/head.js"></script>
+<script src="../../assets/components/common/menu.js"></script>
 <script src="../../assets/components/common/foot.js"></script>
 <script src="../../assets/js/index/index.js"></script>
 </html>

@@ -1,0 +1,34 @@
+.head{
+  background: #fff;
+  padding: 10px 20px;
+  //overflow: hidden;
+  height: 50px;
+  border-bottom: 1px solid #d7dde4;
+  .logo{
+    float: left;
+    width: 30px;
+    height: 30px;
+  }
+  .right_{
+    float: right;
+    line-height: 30px;
+    .dropdown{
+      margin-left: 10px;
+      display: inline-block;
+      color: #999;
+    }
+    .user_pic{
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .user_name{
+      color: #999;
+    }
+    .dropdown-menu{
+      left: auto;
+      right: 0;
+    }
+  }
+}

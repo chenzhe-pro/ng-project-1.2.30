@@ -1,7 +1,7 @@
 /**
  * Created by chenzhe on 17/5/10.
  */
-app.directive('test', function() {
+app.directive('foot', function() {
     return {
         replace:true,
         restrict : 'A', /* restrict this directive to elements */
@@ -10,11 +10,14 @@ app.directive('test', function() {
             name : '=',    //解析数据 =
             myFn : '&'        //函数 &
         },
-        template:"<div>My first directive: <span ng-bind='name'></span><p ng-bind='id'></p></div>",
+        template:
+        '<div class="foot" style="margin-top: 383px;">'+
+        '  2011-2016 © 后台管理系统'+
+        '</div>',
         controller:['$scope',function($scope){
             //共享数据存放在这里
             $scope.id = 'this is a man';
-            alert(1);
+            // alert(1);
         }]
     };
 });
