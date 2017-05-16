@@ -1,0 +1,79 @@
+.order_list{
+  li{
+    position: relative;
+    background-color: #fff;
+    border-bottom: 1px solid $global-border;
+    &:after{
+      content: '';
+      display: block;
+      clear: both;
+    }
+    &:first-child{
+      border-top: 1px solid $global-border;
+    }
+
+  }
+  .order_checkbox{
+    position: absolute;
+    top: 96px;
+  }
+  .order_img{
+    width: 160px;
+    height: 100px;
+    display: block;
+    margin-right: 10px;
+    border-radius: 3px;
+  }
+  .order{
+    padding-left: 40px;
+    .order_code{
+      height: 40px;
+      line-height: 40px;
+      padding-left: 15px;
+      border-bottom: 1px solid #eee;
+      font-size: 13px;
+      //color: #999;
+      &:after{
+        content: '';
+        display: block;
+        clear: both;
+      }
+      >*{
+        float: left;
+      }
+      .order_status{
+        //line-height: 40px;
+        //float: right;
+        margin-left: 30px;
+        span{
+          font-size: 14px;
+          background-color: #d4d4d4;
+          padding: 4px 6px;
+          border-radius: 5px;
+          color: #6b6b6b;
+        }
+      }
+    }
+    .order_detail{
+      padding: 15px;
+      &:after{
+        content: '';
+        display: block;
+        clear: both;
+      }
+      >*{
+        float: left;
+      }
+    }
+    .order_text{
+      width: 40%;
+      margin-right: 20px;
+    }
+    .order_price{
+      line-height: 100px;
+      b{
+        color:#ff6600;
+      }
+    }
+  }
+}

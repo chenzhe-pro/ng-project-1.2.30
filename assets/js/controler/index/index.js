@@ -3,6 +3,9 @@
  */
 app.controller("index_controller",function($scope,$http,$service){
     $scope.date='';
+    $scope.modal=function () {
+        $('#myModal').modal('show');
+    };
     var tree = [
         {
             text: "Parent 1",

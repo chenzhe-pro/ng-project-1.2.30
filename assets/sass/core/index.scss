@@ -1,6 +1,6 @@
 @import "normalize";
 @import "utility";
-//@import "reset";
+@import "reset";
 //@import "grid";
 
 
@@ -63,5 +63,16 @@ body{
   border-top:1px solid $global-border;
   border-bottom:1px solid $global-border;
   padding: 15px 20px;
+}
+.label_list{
+  .label{
+    margin-right: 8px;
+  }
+}
+.form-group{
+  >label{
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 //公共样式 end

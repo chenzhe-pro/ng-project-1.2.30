@@ -1,0 +1,39 @@
+.product_list{
+  li{
+    padding: 15px;
+    background-color: #fff;
+    border-bottom: 1px solid $global-border;
+    &:after{
+      content: '';
+      display: block;
+      clear: both;
+    }
+    &:first-child{
+      border-top: 1px solid $global-border;
+    }
+    >{
+      *{
+        float: left;
+      }
+
+    }
+  }
+  .pro_checkbox{
+    margin-top: 42px;
+    margin-right: 15px;
+  }
+  .pro_img{
+    width: 160px;
+    height: 100px;
+    display: block;
+    margin-right: 10px;
+    border-radius: 3px;
+  }
+  .pro_tag{
+    margin: 8px 0;
+  }
+  .pro_title{
+    font-size: 16px;
+
+  }
+}

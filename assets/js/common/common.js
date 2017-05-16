@@ -187,8 +187,21 @@ if(url.indexOf("login.html")<0)
         return function (input) {
             return $sce.trustAsHtml(input);
         }
+    });
+    app.filter('head_origin_pic', function ($sce) {
+        return function (input) {
+            if(!input)
+                return '../../assets/img/ion-avatar.png';
+            return input;
+        }
+    });
+    app.filter('origin_pic', function ($sce) {
+        return function (input) {
+            if(!input)
+                return '../../assets/img/origin_pic.jpg';
+            return input;
+        }
     })
-
 }
 
 
