@@ -20,7 +20,11 @@
     <![endif]-->
     <script src="../../assets/lib/angular-all-jquery.min.js"></script>
     <script src="../../assets/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../assets/lib/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="../../assets/lib/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+    <script src="../../assets/lib/bootstrap-treeview.js"></script>
     <script src="../../assets/lib/placeholder/2.3.1/jquery.placeholder.min.js"></script>
+    <link rel="stylesheet" href="../../assets/lib/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css">
     <link rel="stylesheet" href="../../assets/css/index.css">
 </head>
 <body ng-app="app" >
@@ -39,7 +43,37 @@
             </div>
         </div>
         <div class="content_content">
-            adadasdas
+            <b>日期选择</b>
+            <form class="form-horizontal " role="form">
+                <div class="form-group">
+                    <label for="firstname" class="col-sm-2 control-label">日期</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="firstname" placeholder="请输入名字" ng-model="date" readonly>{{date}}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="lastname" class="col-sm-2 control-label">姓</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="lastname" placeholder="请输入姓">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-5">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox">请记住我
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-default">登录</button>
+                    </div>
+                </div>
+            </form>
+            <b>树形选择插件</b>
+            <div id="tree"></div>
         </div>
     </div>
     <div foot></div>

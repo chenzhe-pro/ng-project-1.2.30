@@ -17,7 +17,8 @@ app.directive('head', function() {
         '        <div class="right_">'+
         '            <span class="user_name">admin</span>'+
         '            <div class="dropdown">'+
-        '                <img src="../../assets/img/ion-avatar.png" alt="" class="dropdown-toggle user_pic" data-toggle="dropdown"> <b class="caret"></b>'+
+        '                 <span class="glyphicon glyphicon-user dropdown-toggle"></span>'+
+        // '                <img src="../../assets/img/ion-avatar.png" alt="" class="dropdown-toggle user_pic" data-toggle="dropdown"> <b class="caret"></b>'+
         '                <ul class="dropdown-menu">'+
         '                    <li><a href="#">个人中心</a></li>'+
         '                    <li class="divider"></li>'+
