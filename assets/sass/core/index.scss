@@ -12,19 +12,6 @@ html,body{
 body{
 
 }
-.navbar-default{
-  background-color: #eef1f6;
-  border-top: none;
-  border-radius: 0;
-  border-bottom: 1px solid $global-border;
-  margin: 0;
-}
-.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover
-{
-  border-bottom: 2px solid #20a0ff;
-  background-color: #eef1f6;
-  color: #20a0ff;
-}
 .content_head{
   p{
     margin: 0;
@@ -75,8 +62,45 @@ body{
     margin-right: 8px;
   }
 }
+//公共样式 end
+//覆盖bootstrap原始样式 start
+.navbar-default{
+  background-color: #eef1f6;
+  border-top: none;
+  border-radius: 0;
+  border-bottom: 1px solid $global-border;
+  margin: 0;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover
+{
+  border-bottom: 2px solid #499fe8;
+  background-color: #eef1f6;
+  color: #499fe8;
+}
 .dropdown{
   cursor: pointer;
+  .caret{
+    font-size: 13px;
+    border-top: 5px dashed;
+    border-top: 5px solid\9;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    transform: rotate(0deg);
+  }
+  &.open{
+    .caret{
+      transform: rotate(180deg);
+      transition: all .3s;
+    }
+  }
+}
+.btn-primary{
+  background-color: #499fe8;
+  border-color: #4c91ce;
+}
+.btn-primary:hover{
+  background-color: #337ab7;
+  border-color: #2e6da4;
 }
 .form-group{
   >label{
@@ -84,4 +108,4 @@ body{
     padding-right: 0;
   }
 }
-//公共样式 end
+//覆盖bootstrap原始样式 end
