@@ -32,16 +32,48 @@
     <div head ><b>scsaaa</b></div>
     <div menu></div>
     <div ng-controller="index_controller">
-        <div class="content_head clearfix">
-            <div class="content_head_title">
-                <div class="icon_area"><span class="glyphicon glyphicon-th"></span></div>
-                <div class="text_title">
-                    <p>撒上点萨达</p>
-                </div>
-                <div class="fr">
-                    <a type="button" class="btn btn-primary btn-sm" href="javascript:;">筛选条件</a>
+        <!--<div class="content_head clearfix">-->
+            <!--<div class="content_head_title" ng-class="{dropdown_:dropdown.length>0}">-->
+                <!--<div class="icon_area" ng-class="{mt10:dropdown.length>0}"><span class="glyphicon glyphicon-th"></span></div>-->
+                <!--<div class="text_title">-->
+                    <!--<p>商品管理</p>-->
+                    <!--<div class="dropdown">-->
+                        <!--<span data-toggle="dropdown">全部订单 <span class="caret"></span></span>-->
+                        <!--<ul class="dropdown-menu">-->
+                            <!--<li>-->
+                                <!--<a href="#">Swing</a></li>-->
+                            <!--<li>-->
+                                <!--<a href="#">jMeter</a></li>-->
+                            <!--<li>-->
+                                <!--<a href="#">EJB</a></li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+
+                <!--</div>-->
+                <!--<div class="fr">-->
+                    <!--<a type="button" class="btn btn-primary btn-sm mt10" href="javascript:;">筛选条件</a>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <div content-head dropdown="false" icon-class="glyphicon-th">
+            <div class="text_title">
+                <p>店铺管理</p>
+            </div>
+            <a type="button" class="fr btn btn-primary btn-sm mt10" href="javascript:;">筛选条件</a>
+        </div>
+        <div content-head dropdown="true" icon-class="glyphicon-th">
+            <div class="text_title">
+                <p>商品管理</p>
+                <div class="dropdown">
+                    <span data-toggle="dropdown">{{select.value}} <span class="caret"></span></span>
+                    <ul class="dropdown-menu">
+                        <li ng-repeat="x in dropdown_list" repeat-finish="repeatFinishFun" ng-click="change(x)">
+                            <a href="javascript:;" id="{{x.id}}">{{x.value}}</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
+            <a type="button" class="fr btn btn-primary btn-sm mt10" href="javascript:;">筛选条件</a>
         </div>
         <div class="content_content">
             <b>表单</b>
@@ -163,5 +195,6 @@
 <script src="../../assets/components/common/head.js"></script>
 <script src="../../assets/components/common/menu.js"></script>
 <script src="../../assets/components/common/foot.js"></script>
+<script src="../../assets/components/common/content_head.js"></script>
 <script src="../../assets/js/controler/index/index.js"></script>
 </html>

@@ -31,17 +31,23 @@ body{
   }
   padding: 20px;
   .content_head_title{
+    position: relative;
     .icon_area{
       padding: 2px 4px 6px 6px;
       border-radius: 5px;
       text-align: center;
       background-color: #7F8DE1;
-      float: left;
+      //float: left;
+      position: absolute;
       margin-right: 10px;
       .glyphicon{
         color: #fff;
         font-size: 24px;
       }
+    }
+    .transclude{
+      //position: absolute;
+      padding-left: 44px;
     }
     .text_title{
       float: left;
@@ -49,7 +55,7 @@ body{
         margin-top: 6px;
       }
     }
-    &.dropdown{
+    &.dropdown_{
       .text_title{
         p{
           font-size: 13px;
@@ -68,6 +74,9 @@ body{
   .label{
     margin-right: 8px;
   }
+}
+.dropdown{
+  cursor: pointer;
 }
 .form-group{
   >label{

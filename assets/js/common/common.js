@@ -201,6 +201,22 @@ if(url.indexOf("login.html")<0)
                 return '../../assets/img/origin_pic.jpg';
             return input;
         }
+    });
+    app.directive('repeatFinish',function(){
+        return {
+            restrict : 'A',
+            replace : true,
+            require:'?',
+            scope:true,
+            link: function(scope,element,attr){
+                console.log(scope.$index)
+                if(scope.$last == true){
+                    console.log('ng-repeat执行完毕');
+                    // scope.$emit('repeatFinish');
+                    eval( 'scope.'+attr.repeatFinish+'()' )
+                }
+            }
+        }
     })
 }
 

@@ -6,6 +6,23 @@ app.controller("index_controller",function($scope,$http,$service){
     $scope.modal=function () {
         $('#myModal').modal('show');
     };
+    $scope.dropdown_list=[
+        {id:1,value:'全部订单'},
+        {id:2,value:'全部订单2'},
+        {id:3,value:'已支付'}
+    ];
+    $scope.select=$scope.dropdown_list[0];
+    $scope.change=function (x) {
+        $scope.select=x;
+    };
+    $scope.repeatFinishFun=function () {
+        // $scope.initJQ();
+        console.log(111)
+    };
+    $scope.repeatFinishFun1=function () {
+        // $scope.initJQ();
+        console.log(222)
+    };
     var tree = [
         {
             text: "Parent 1",
