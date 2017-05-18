@@ -1,6 +1,7 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-        "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!--<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"-->
+        <!--"http://www.w3.org/TR/html4/loose.dtd">-->
+<!DOCTYPE html>
+<html xmlns:ng="http://angularjs.org"  >
 <head>
     <title>后台管理系统</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -9,7 +10,7 @@
     <!--[if lt IE 8]>
     <script>
         alert("您在使用IE低版本浏览器，请使用IE8及以上或者谷歌、360浏览器将会会获得更好的体验");
-        window.location.href = "http://rj.baidu.com/soft/detail/14744.html";
+        window.location.href = "http://browser.qq.com/";
     </script>
     <![endif]-->
     <link rel="stylesheet" href="../../assets/lib/bootstrap/css/bootstrap.min.css">
@@ -17,6 +18,12 @@
     <!--[if lt IE 9]>
     <script src="../../assets/lib/html5shiv.min.js"></script>
     <script src="../../assets/lib/respond.min.js"></script>
+    <script >
+        document.createElement('page-head');
+//        document.createElement('ng-pluralize');
+//        document.createElement('ng-view');
+    </script>
+
     <![endif]-->
     <script src="../../assets/lib/angular-all-jquery.min.js"></script>
     <script src="../../assets/lib/bootstrap/js/bootstrap.min.js"></script>
@@ -26,55 +33,38 @@
     <script src="../../assets/lib/placeholder/2.3.1/jquery.placeholder.min.js"></script>
     <link rel="stylesheet" href="../../assets/lib/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css">
     <link rel="stylesheet" href="../../assets/lib/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://www.jq22.com/demo/jquery-butt-150401203937/css/buttons.css">
     <link rel="stylesheet" href="../../assets/css/index.css">
 </head>
-<body ng-app="app" >
-    <div head ><b>scsaaa</b></div>
-    <div menu></div>
-    <div ng-controller="index_controller">
-        <!--<div class="content_head clearfix">-->
-            <!--<div class="content_head_title" ng-class="{dropdown_:dropdown.length>0}">-->
-                <!--<div class="icon_area" ng-class="{mt10:dropdown.length>0}"><span class="glyphicon glyphicon-th"></span></div>-->
-                <!--<div class="text_title">-->
-                    <!--<p>商品管理</p>-->
-                    <!--<div class="dropdown">-->
-                        <!--<span data-toggle="dropdown">全部订单 <span class="caret"></span></span>-->
-                        <!--<ul class="dropdown-menu">-->
-                            <!--<li>-->
-                                <!--<a href="#">Swing</a></li>-->
-                            <!--<li>-->
-                                <!--<a href="#">jMeter</a></li>-->
-                            <!--<li>-->
-                                <!--<a href="#">EJB</a></li>-->
-                        <!--</ul>-->
-                    <!--</div>-->
-
-                <!--</div>-->
-                <!--<div class="fr">-->
-                    <!--<a type="button" class="btn btn-primary btn-sm mt10" href="javascript:;">筛选条件</a>-->
-                <!--</div>-->
-            <!--</div>-->
+<body ng-app="app" id=”ng-app” ng-cloak>
+    <div page-head ></div>
+    <div page-menu ></div>
+    <div ng-controller="index_controller" >
+        <!--<div content-head title="商品管理" dropdown="dropdown_list" select="dropdown_list"-->
+             <!--icon-class="fa-shopping-bag" btn-text="筛选条件" btn-fn="repeatFinishFun()">-->
         <!--</div>-->
-        <div content-head dropdown="false" icon-class="fa-th">
-            <div class="text_title">
-                <p>店铺管理</p>
-            </div>
-            <a type="button" class="fr btn btn-primary btn-sm mt10" href="javascript:;">筛选条件</a>
-        </div>
-        <div content-head dropdown="true" icon-class="fa-shopping-bag">
-            <div class="text_title">
-                <p>商品管理</p>
-                <div class="dropdown">
-                    <span data-toggle="dropdown">{{select.value}} <span class="caret"></span></span>
-                    <ul class="dropdown-menu">
-                        <li ng-repeat="x in dropdown_list" repeat-finish="repeatFinishFun" ng-click="change(x)">
-                            <a href="javascript:;" id="{{x.id}}">{{x.value}}</a>
-                        </li>
-                    </ul>
+        <div content-head title="商品管理" icon-class="fa-shopping-bag" >
+            <div>
+                <div class="text_title">
+                    <p >商品管理</p>
                 </div>
+                <a type="button" class="fr btn btn-primary btn-sm " ng-class="{mt10:dropdown}" href="javascript:;" ng-click="repeatFinishFun1()">筛选条件</a>
             </div>
-            <a type="button" class="fr btn btn-primary btn-sm mt10" href="javascript:;">筛选条件</a>
+        </div>
+        <div content-head title="商品管理" icon-class="fa-th" dropdown="true">
+            <div>
+                <div class="text_title">
+                    <p >商品管理</p>
+                    <div class="dropdown">
+                        <span data-toggle="dropdown"><span ng-bind="select.value"></span> <span class="caret" ></span></span>
+                        <ul class="dropdown-menu">
+                            <li ng-repeat="x in dropdown_list" repeat-finish="repeatFinishFun" ng-click='change(x)'>
+                                <a href="javascript:;" id="{{x.id}}">{{x.value}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <a type="button" class="fr btn btn-primary btn-sm mt10"  href="javascript:;" ng-click="repeatFinishFun1()">筛选条件</a>
+            </div>
         </div>
         <div class="content_content">
             <b>表单</b>
@@ -189,7 +179,7 @@
             </ul>
         </div>
     </div>
-    <div foot></div>
+    <div page-foot></div>
 </body>
 <script src="../../assets/lib/quicker-origin.js"></script>
 <script src="../../assets/js/common/common.js"></script>

@@ -6,8 +6,12 @@ app.directive('contentHead', function() {
         replace:true,
         restrict : 'A', /* restrict this directive to elements */
         scope : {
+            title:'@',
             dropdown:'@',
-            iconClass:'@'
+            // select:'=select',
+            iconClass:'@',
+            // btnText:'@',
+            // btnFn:'&'
         },
         transclude:true,
         // template:
@@ -39,12 +43,20 @@ app.directive('contentHead', function() {
                 //     })
                 // })
             };
+            $scope.dropdown_list=[
+                {id:1,value:'全部订单'},
+                {id:2,value:'全部订单2'},
+                {id:3,value:'已支付'}
+            ];
+            $scope.select=$scope.dropdown_list[0];
+            $scope.change=function (x) {
+                $scope.select=x;
+            };
             $scope.repeatFinishFun=function () {
-                $scope.initJQ();
-                console.log(111)
+
             };
             $scope.repeatFinishFun1=function () {
-                $scope.initJQ();
+                // $scope.initJQ();
                 console.log(222)
             };
 

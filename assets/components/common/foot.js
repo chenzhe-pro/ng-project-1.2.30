@@ -1,7 +1,7 @@
 /**
  * Created by chenzhe on 17/5/10.
  */
-app.directive('foot', function() {
+app.directive('pageFoot', function() {
     return {
         replace:true,
         restrict : 'A', /* restrict this directive to elements */

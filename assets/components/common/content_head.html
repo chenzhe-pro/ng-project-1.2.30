@@ -1,8 +1,20 @@
 <div class="content_head clearfix">
-    <div class="content_head_title" ng-class="{dropdown_:dropdown=='true'}">
-        <div class="icon_area" ng-class="{mt10:dropdown=='true'}"><i class="fa" ng-class="iconClass" aria-hidden="true"></i></div>
-        <div class="transclude" ng-transclude>
-
+    <div class="content_head_title" ng-class="{dropdown_:dropdown}">
+        <div class="icon_area" ng-style="{top:dropdown?'10px':'0'}"><i class="fa" ng-class="iconClass" aria-hidden="true"></i></div>
+        <div class="transclude clearfix" ng-transclude>
+            <!--<div class="text_title">-->
+                <!--<p >{{title}}</p>-->
+                <!--<div class="dropdown">-->
+                    <!--<span data-toggle="dropdown"><span ng-bind="select.value"></span> <span class="caret" ng-show="dropdown"></span></span>-->
+                    <!--<ul class="dropdown-menu">-->
+                        <!--<li ng-repeat="x in dropdown" repeat-finish="repeatFinishFun" ng-click="change(x)">-->
+                            <!--<a href="javascript:;" id="{{x.id}}">{{x.value}}</a>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div  class="fr"></div>-->
+            <!--<a type="button" class="fr btn btn-primary btn-sm " ng-class="{mt10:dropdown}" href="javascript:;" ng-click="btnFn()">筛选条件</a>-->
         </div>
     </div>
 </div>

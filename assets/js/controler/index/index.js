@@ -17,10 +17,11 @@ app.controller("index_controller",function($scope,$http,$service){
     };
     $scope.repeatFinishFun=function () {
         // $scope.initJQ();
-        console.log(111)
+        alert(111)
     };
     $scope.repeatFinishFun1=function () {
         // $scope.initJQ();
+        alert(111)
         console.log(222)
     };
     var tree = [

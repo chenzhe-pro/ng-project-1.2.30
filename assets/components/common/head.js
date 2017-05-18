@@ -1,10 +1,10 @@
 /**
  * Created by chenzhe on 17/5/10.
  */
-app.directive('head', function() {
+app.directive('pageHead', function() {
     return {
         replace:true,
-        restrict : 'A', /* restrict this directive to elements */
+        restrict : 'EA', /* restrict this directive to elements */
         scope : {
             myId : '@',        //解析普通字符串 @
             name : '@',    //解析数据 =
