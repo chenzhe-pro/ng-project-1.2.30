@@ -3,109 +3,316 @@
 @import "reset";
 //@import "grid";
 
-
 //公共样式 start
-html,body{
+html, body {
   background-color: $body-bg;
   -webkit-font-smoothing: antialiased;
 }
-body{
+
+body {
 
 }
-.content_head{
-  p{
+
+.content_head {
+  p {
     margin: 0;
   }
   padding: 20px;
-  .content_head_title{
+  .content_head_title {
     position: relative;
-    .icon_area{
-      padding: 3px 5px ;
+    .icon_area {
+      padding: 3px 5px;
       border-radius: 5px;
       text-align: center;
       background-color: #7F8DE1;
       //float: left;
       position: absolute;
       //margin-right: 10px;
-      .fa{
+      .fa {
         color: #fff;
         font-size: 24px;
       }
     }
-    .transclude{
+    .transclude {
       //position: absolute;
       padding-left: 44px;
     }
-    .text_title{
+    .text_title {
       float: left;
-      p{
+      p {
         margin-top: 6px;
       }
     }
-    &.dropdown_{
-      .text_title{
-        p{
+    &.dropdown_ {
+      .text_title {
+        p {
           font-size: 13px;
         }
       }
     }
   }
-}
-.content_content{
-  background-color:#fff;
-  border-top:1px solid $global-border;
-  border-bottom:1px solid $global-border;
-  padding: 15px 20px;
-}
-.label_list{
-  .label{
-    margin-right: 8px;
-  }
-}
-//公共样式 end
-//覆盖bootstrap原始样式 start
-.navbar-default{
-  background-color: #eef1f6;
-  border-top: none;
-  border-radius: 0;
-  border-bottom: 1px solid $global-border;
-  margin: 0;
-}
-.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover
-{
-  border-bottom: 2px solid #499fe8;
-  background-color: #eef1f6;
-  color: #499fe8;
-}
-.dropdown{
-  cursor: pointer;
-  .caret{
-    font-size: 13px;
-    border-top: 5px dashed;
-    border-top: 5px solid\9;
-    border-right: 5px solid transparent;
-    border-left: 5px solid transparent;
-    transform: rotate(0deg);
-  }
-  &.open{
-    .caret{
-      transform: rotate(180deg);
-      transition: all .3s;
+  .operation_btn{
+    margin-top: 5px;
+    a{
+      float: right;
+      margin-left: 5px;
     }
   }
 }
-.btn-primary{
-  background-color: #499fe8;
+$filter_width:450px;
+.content_content {
+  background-color: #fff;
+  border-top: 1px solid $global-border;
+  border-bottom: 1px solid $global-border;
+  padding: 15px 20px;
+  position: relative;
+  .content{
+    padding-right: 0;
+  }
+}
+.right_slide{
+  width: $filter_width;
+  height: 100%;
+  position: absolute;
+  right: -$filter_width;
+  top:0;
+  padding: 15px;
+  border-left: 1px solid $global-border;
+  //box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.40);
+  overflow: auto;
+  .return_right{
+    float: right;
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 15px;
+    cursor: pointer;
+  }
+}
+.label_list {
+  .label {
+    margin-right: 8px;
+  }
+}
+
+//公共样式 end
+//覆盖bootstrap原始样式 start
+.navbar{
+  min-height: 40px;
+}
+.navbar-default {
+  background-color: #fff;
+  border-top: none;
+  border-radius: 0;
+  border-bottom: 3px solid #327cbb;
+  margin: 0;
+}
+.navbar-default .navbar-nav>li>a {
+  color: #16325c;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+  border-top: 2px solid #327cbb;
+  background-color: $body-bg;
+  //color: #327cbb;
+  border-left: 1px solid #d7dde4;
+  border-right: 1px solid #d7dde4;
+
+}
+
+.navbar-default .active {
+  &:after {
+    content: '';
+    display: inline-block;
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    background-color: $body-bg;
+  }
+}
+.navbar-brand{
+  height: 40px;
+  padding: 10px 15px;
+}
+@media (min-width: 768px){
+  .navbar-nav>li>a{
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+.slds-icon-waffle_container {
+  outline: 0
+}
+
+.slds-icon-waffle {
+  width: 21px;
+  height: 21px;
+  position: relative
+}
+
+.slds-icon-waffle div {
+  width: 5px;
+  height: 5px;
+  background: rgb(84, 105, 141);
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  -webkit-transition: background 100ms;
+  transition: background 100ms;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%
+}
+
+.slds-icon-waffle .slds-r1 {
+  top: 0;
+  left: 0
+}
+
+.slds-icon-waffle .slds-r2 {
+  top: 0;
+  left: 8px
+}
+
+.slds-icon-waffle .slds-r3 {
+  top: 0;
+  right: 0
+}
+
+.slds-icon-waffle .slds-r4 {
+  top: 8px;
+  left: 0
+}
+
+.slds-icon-waffle .slds-r5 {
+  top: 8px;
+  left: 8px
+}
+
+.slds-icon-waffle .slds-r6 {
+  top: 8px;
+  right: 0
+}
+
+.slds-icon-waffle .slds-r7 {
+  bottom: 0;
+  left: 0
+}
+
+.slds-icon-waffle .slds-r8 {
+  bottom: 0;
+  left: 8px
+}
+
+.slds-icon-waffle .slds-r9 {
+  bottom: 0;
+  right: 0
+}
+
+.slds-icon-waffle_container:hover .slds-icon-waffle, .slds-icon-waffle_container:focus .slds-icon-waffle {
+  cursor: pointer
+}
+
+.slds-icon-waffle_container:hover .slds-r1, .slds-icon-waffle_container:hover .slds-r2, .slds-icon-waffle_container:hover .slds-r3, .slds-icon-waffle_container:focus .slds-r1, .slds-icon-waffle_container:focus .slds-r2, .slds-icon-waffle_container:focus .slds-r3 {
+  background: #418fde
+}
+
+.slds-icon-waffle_container:hover .slds-r4, .slds-icon-waffle_container:hover .slds-r5, .slds-icon-waffle_container:hover .slds-r7, .slds-icon-waffle_container:focus .slds-r4, .slds-icon-waffle_container:focus .slds-r5, .slds-icon-waffle_container:focus .slds-r7 {
+  background: #ed8b00
+}
+
+.slds-icon-waffle_container:hover .slds-r6, .slds-icon-waffle_container:hover .slds-r8, .slds-icon-waffle_container:hover .slds-r9, .slds-icon-waffle_container:focus .slds-r6, .slds-icon-waffle_container:focus .slds-r8, .slds-icon-waffle_container:focus .slds-r9 {
+  background: #ffb60f
+}
+
+.slds-icon-waffle_container:hover .slds-r2, .slds-icon-waffle_container:hover .slds-r4, .slds-icon-waffle_container:focus .slds-r2, .slds-icon-waffle_container:focus .slds-r4 {
+  -webkit-transition-delay: 50ms;
+  transition-delay: 50ms;
+  -webkit-animation-delay: 50ms;
+  animation-delay: 50ms
+}
+
+.slds-icon-waffle_container:hover .slds-icon-waffle div, .slds-icon-waffle_container:focus .slds-icon-waffle div {
+  -webkit-animation: throb 2 200ms alternate;
+  animation: throb 2 200ms alternate
+}
+
+.slds-icon-waffle_container:hover .slds-r3, .slds-icon-waffle_container:hover .slds-r5, .slds-icon-waffle_container:hover .slds-r7, .slds-icon-waffle_container:focus .slds-r3, .slds-icon-waffle_container:focus .slds-r5, .slds-icon-waffle_container:focus .slds-r7 {
+  -webkit-transition-delay: 100ms;
+  transition-delay: 100ms;
+  -webkit-animation-delay: 100ms;
+  animation-delay: 100ms
+}
+
+.slds-icon-waffle_container:hover .slds-r6, .slds-icon-waffle_container:hover .slds-r8, .slds-icon-waffle_container:focus .slds-r6, .slds-icon-waffle_container:focus .slds-r8 {
+  -webkit-transition-delay: 150ms;
+  transition-delay: 150ms;
+  -webkit-animation-delay: 150ms;
+  animation-delay: 150ms
+}
+
+.slds-icon-waffle_container:hover .slds-r9, .slds-icon-waffle_container:focus .slds-r9 {
+  -webkit-transition-delay: 200ms;
+  transition-delay: 200ms;
+  -webkit-animation-delay: 200ms;
+  animation-delay: 200ms
+}
+
+.slds-icon-waffle_container .slds-r1 {
+  -webkit-transition-delay: 200ms;
+  transition-delay: 200ms
+}
+
+.slds-icon-waffle_container .slds-r2, .slds-icon-waffle_container .slds-r4 {
+  -webkit-transition-delay: 150ms;
+  transition-delay: 150ms
+}
+
+.slds-icon-waffle_container .slds-r3, .slds-icon-waffle_container .slds-r5, .slds-icon-waffle_container .slds-r7 {
+  -webkit-transition-delay: 100ms;
+  transition-delay: 100ms
+}
+
+.slds-icon-waffle_container .slds-r6, .slds-icon-waffle_container .slds-r8 {
+  -webkit-transition-delay: 50ms;
+  transition-delay: 50ms
+}
+
+.dropdown {
+  cursor: pointer;
+
+}
+.caret {
+  font-size: 13px;
+  border-top: 5px dashed;
+  border-top: 5px solid \9;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  transform: rotate(0deg);
+}
+&.open {
+  .caret {
+    transform: rotate(180deg);
+    transition: all .3s;
+  }
+}
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {
+  background-color: #327cbb;
+}
+.btn-primary {
+  background-color: #327cbb;
   border-color: #4c91ce;
 }
-.btn-primary:hover{
+
+.btn-primary:hover {
   background-color: #337ab7;
   border-color: #2e6da4;
 }
-.form-group{
-  >label{
+
+.form-group {
+  > label {
     padding-left: 0;
     padding-right: 0;
   }
 }
+
 //覆盖bootstrap原始样式 end

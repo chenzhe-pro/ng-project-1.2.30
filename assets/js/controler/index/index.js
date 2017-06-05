@@ -15,14 +15,21 @@ app.controller("index_controller",function($scope,$http,$service){
     $scope.change=function (x) {
         $scope.select=x;
     };
-    $scope.repeatFinishFun=function () {
+    $scope.$on('change-dropdown', function(d,data) {
+        console.log(data);
+    });
+    $scope.repeatFinishFun=function (x) {
         // $scope.initJQ();
-        alert(111)
+        alert(x)
     };
     $scope.repeatFinishFun1=function () {
         // $scope.initJQ();
         alert(111)
         console.log(222)
+    };
+    $scope.openFilter=function () {
+        $('.filter_form').css({'right':'0'});
+        $(".content_content .content").css({'padding-right':'450px'});
     };
     var tree = [
         {

@@ -34,149 +34,144 @@
     <link rel="stylesheet" href="../../assets/lib/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css">
     <link rel="stylesheet" href="../../assets/lib/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="../../assets/css/index.css">
+    <style>
+    </style>
 </head>
 <body ng-app="app" id=”ng-app” ng-cloak>
     <div page-head ></div>
     <div page-menu ></div>
     <div ng-controller="index_controller" >
-        <!--<div content-head title="商品管理" dropdown="dropdown_list" select="dropdown_list"-->
-             <!--icon-class="fa-shopping-bag" btn-text="筛选条件" btn-fn="repeatFinishFun()">-->
+        <!--<div content-head title="商品管理" icon-class="fa-shopping-bag" >-->
+            <!--<div>-->
+                <!--<div class="text_title">-->
+                    <!--<p >商品管理</p>-->
+                <!--</div>-->
+                <!--<a type="button" class="fr btn btn-primary btn-sm " ng-class="{mt10:dropdown}" href="javascript:;" ng-click="repeatFinishFun1()">筛选条件</a>-->
+            <!--</div>-->
         <!--</div>-->
-        <div content-head title="商品管理" icon-class="fa-shopping-bag" >
-            <div>
-                <div class="text_title">
-                    <p >商品管理</p>
-                </div>
-                <a type="button" class="fr btn btn-primary btn-sm " ng-class="{mt10:dropdown}" href="javascript:;" ng-click="repeatFinishFun1()">筛选条件</a>
+        <div content-head title="商品管理" icon-class="fa-th" dropdown="dropdown_list">
+            <div class="btn-group btn-group-sm">
+                <a type="button" class="btn btn-default">新建</a>
+                <a type="button" class="btn btn-default">导入</a>
+                <a type="button" class="btn btn-default"><span class="caret"></span></a>
+                <!--<a type="button" class="fr btn btn-primary btn-sm mt10"  href="javascript:;" ng-click="repeatFinishFun1()">筛选条件</a>-->
             </div>
         </div>
-        <div content-head title="商品管理" icon-class="fa-th" dropdown="true">
-            <div>
-                <div class="text_title">
-                    <p >商品管理</p>
-                    <div class="dropdown">
-                        <span data-toggle="dropdown"><span ng-bind="select.value"></span> <span class="caret" ></span></span>
-                        <ul class="dropdown-menu">
-                            <li ng-repeat="x in dropdown_list" repeat-finish="repeatFinishFun" ng-click='change(x)'>
-                                <a href="javascript:;" id="{{x.id}}">{{x.value}}</a>
-                            </li>
-                        </ul>
+        <div class="content_content clearfix">
+            <div class="content">
+                <b>表单</b>
+                <div class="form clearfix" style="border: 1px solid #eee;padding-top: 20px;">
+                    <form class="form-horizontal " role="form" style="width: 500px;">
+                        <div class="form-group">
+                            <label for="firstname" class="col-sm-2 control-label">选择日期</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="firstname" placeholder="请输入名字" ng-model="date" readonly>{{date}}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname" class="col-sm-2 control-label">名字</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="lastname" placeholder="请输入姓">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname" class="col-sm-3 control-label">选择类型啊啊啊</label>
+                            <div class="col-sm-9">
+                                <select class="form-control ">
+                                    <option value="">类型1</option>
+                                    <option value="">类型2</option>
+                                    <option value="">类型3</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">请记住我
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default " ng-click="modal()">膜态框</button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default ">登录</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <h4 class="modal-title" id="myModalLabel">模态框（Modal）标题</h4>
+                                </div>
+                                <div class="modal-body">在这里添加一些文本</div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">关闭</button>
+                                    <button type="button" class="btn btn-primary btn-sm">提交更改</button>
+                                </div>
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal -->
                     </div>
                 </div>
-                <a type="button" class="fr btn btn-primary btn-sm mt10"  href="javascript:;" ng-click="repeatFinishFun1()">筛选条件</a>
-            </div>
-        </div>
-        <div class="content_content">
-            <b>表单</b>
-            <div class="form clearfix" style="border: 1px solid #eee;padding-top: 20px;">
-                <form class="form-horizontal " role="form" style="width: 500px;">
-                    <div class="form-group">
-                        <label for="firstname" class="col-sm-2 control-label">选择日期</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="firstname" placeholder="请输入名字" ng-model="date" readonly>{{date}}
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="lastname" class="col-sm-2 control-label">名字</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="lastname" placeholder="请输入姓">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="lastname" class="col-sm-3 control-label">选择类型啊啊啊</label>
-                        <div class="col-sm-9">
-                            <select class="form-control ">
-                                <option value="">类型1</option>
-                                <option value="">类型2</option>
-                                <option value="">类型3</option>
-                            </select>
-                        </div>
 
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox">请记住我
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-                            <button type="submit" class="btn btn-default " ng-click="modal()">膜态框</button>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-                            <button type="submit" class="btn btn-default ">登录</button>
-                        </div>
-                    </div>
-                </form>
-                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                <h4 class="modal-title" id="myModalLabel">模态框（Modal）标题</h4>
-                            </div>
-                            <div class="modal-body">在这里添加一些文本</div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">关闭</button>
-                                <button type="button" class="btn btn-primary btn-sm">提交更改</button>
-                            </div>
-                        </div><!-- /.modal-content -->
-                    </div><!-- /.modal -->
+                <b>树形选择插件</b>
+                <div class="tree clearfix">
+                    <div id="tree" class="col-sm-4"></div>
                 </div>
-            </div>
 
-            <b>树形选择插件</b>
-            <div class="tree clearfix">
-                <div id="tree" class="col-sm-4"></div>
-            </div>
-
-            <b>商品列表</b>
-            <ul class="product_list">
-                <li class="">
-                    <div class="pro_checkbox"><input type="checkbox"></div>
-                    <img ng-src="{{date|origin_pic}}" alt="" class="pro_img">
-                    <div class="pro_text">
-                        <p class="pro_title">撒打算打算打算的</p>
-                        <p class="pro_des">qwewqeqweqwewqeqweqw</p>
-                    </div>
-                </li>
-                <li class="">
-                    <div class="pro_checkbox"><input type="checkbox"></div>
-                    <img ng-src="{{date|origin_pic}}" alt="" class="pro_img">
-                    <div class="pro_text">
-                        <p class="pro_title">撒打算打算打算的</p>
-                        <p class="pro_tag label_list"><span class="label label-default">默认标签</span><span class="label label-default">默认标签</span></p>
-                        <p class="pro_des">qwewqeqweqwewqeqweqw</p>
-                    </div>
-                </li>
-            </ul>
-            <b>订单列表</b>
-            <ul class="order_list">
-                <li class="">
-                    <div class="order_checkbox"><input type="checkbox"></div>
-                    <div class="order">
-                        <div class="order_code">
-                            <div class="orderTime mr30">2017-05-16 16:10:58</div>
-                            <div class="orderNum">订单号：14949222582094282</div>
-                            <div class="order_status">订单状态：<span >正在交易</span></div>
+                <b>商品列表</b>
+                <ul class="product_list">
+                    <li class="">
+                        <div class="pro_checkbox"><input type="checkbox"></div>
+                        <img ng-src="{{date|origin_pic}}" alt="" class="pro_img">
+                        <div class="pro_text">
+                            <p class="pro_title">撒打算打算打算的</p>
+                            <p class="pro_des">qwewqeqweqwewqeqweqw</p>
                         </div>
-                        <div class="order_detail">
-                            <img ng-src="{{date|origin_pic}}" alt="" class="order_img">
-                            <div class="order_text">
-                                <p class="order_title">撒打算打算打算的</p>
-                                <p class="order_des">qwewqeqweqwewqeqweqw</p>
+                    </li>
+                    <li class="">
+                        <div class="pro_checkbox"><input type="checkbox"></div>
+                        <img ng-src="{{date|origin_pic}}" alt="" class="pro_img">
+                        <div class="pro_text">
+                            <p class="pro_title">撒打算打算打算的</p>
+                            <p class="pro_tag label_list"><span class="label label-default">默认标签</span><span class="label label-default">默认标签</span></p>
+                            <p class="pro_des">qwewqeqweqwewqeqweqw</p>
+                        </div>
+                    </li>
+                </ul>
+                <b>订单列表</b>
+                <ul class="order_list">
+                    <li class="">
+                        <div class="order_checkbox"><input type="checkbox"></div>
+                        <div class="order">
+                            <div class="order_code">
+                                <div class="orderTime mr30">2017-05-16 16:10:58</div>
+                                <div class="orderNum">订单号：14949222582094282</div>
+                                <div class="order_status">订单状态：<span >正在交易</span></div>
                             </div>
-                            <div class="order_price">成交价格：<b>$3220</b></div>
+                            <div class="order_detail">
+                                <img ng-src="{{date|origin_pic}}" alt="" class="order_img">
+                                <div class="order_text">
+                                    <p class="order_title">撒打算打算打算的</p>
+                                    <p class="order_des">qwewqeqweqwewqeqweqw</p>
+                                </div>
+                                <div class="order_price">成交价格：<b>$3220</b></div>
+                            </div>
                         </div>
-                    </div>
 
-                </li>
-            </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div filter-form></div>
         </div>
     </div>
     <div page-foot></div>
@@ -187,5 +182,6 @@
 <script src="../../assets/components/common/menu.js"></script>
 <script src="../../assets/components/common/foot.js"></script>
 <script src="../../assets/components/common/content_head.js"></script>
+<script src="../../assets/components/common/filter_form.js"></script>
 <script src="../../assets/js/controler/index/index.js"></script>
 </html>
