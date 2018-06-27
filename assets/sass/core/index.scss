@@ -314,5 +314,8 @@ $filter_width:450px;
     padding-right: 0;
   }
 }
+.table-bordered>thead>tr>td, .table-bordered>thead>tr>th{
+  border-bottom-width: 1px;
+}
 
 //覆盖bootstrap原始样式 end

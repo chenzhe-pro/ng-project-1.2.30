@@ -16,9 +16,11 @@ app.directive('pageHead', function() {
         '        <img src="../../assets/img/logo.png" alt="" class="logo">'+
         '        <div class="right_">'+
         '            <span class="user_name">admin</span>'+
+            '<i class="fa fa-question animated" aria-hidden="true"></i>'+
+            '<i class="fa fa-cog animated" aria-hidden="true"></i>'+
+            '<i class="fa fa-bell animated" aria-hidden="true"></i>'+
         '            <div class="dropdown">'+
-        '                 <span class="glyphicon glyphicon-user dropdown-toggle"></span>'+
-        // '                <img src="../../assets/img/ion-avatar.png" alt="" class="dropdown-toggle user_pic" data-toggle="dropdown"> <b class="caret"></b>'+
+        '                 <i class="fa fa-user-circle-o dropdown-toggle" aria-hidden="true" data-toggle="dropdown"></i>'+
         '                <ul class="dropdown-menu">'+
         '                    <li><a href="#">个人中心</a></li>'+
         '                    <li class="divider"></li>'+
@@ -37,6 +39,21 @@ app.directive('pageHead', function() {
                 html:true,
                 title:$scope.title,
                 content:$scope.content
+            });
+            $('.fa-question').hover(function () {
+                $(this).addClass("pulse")
+            },function () {
+                $(this).removeClass("pulse")
+            });
+            $('.fa-cog').hover(function () {
+                $(this).addClass("rotateIn")
+            },function () {
+                $(this).removeClass("rotateIn")
+            });
+            $('.fa-bell').hover(function () {
+                $(this).addClass("swing")
+            },function () {
+                $(this).removeClass("swing")
             });
             $scope.pop=function () {
                 // $("a.btn").append("asdasdasdasd")

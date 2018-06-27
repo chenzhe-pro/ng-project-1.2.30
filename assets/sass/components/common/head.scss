@@ -12,10 +12,17 @@
   .right_{
     float: right;
     line-height: 30px;
-    .dropdown{
+    i{
       margin-left: 10px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    .dropdown{
       display: inline-block;
-      color: #999;
+      //color: #999;
+      .fa-user-circle-o{
+        font-size: 20px;
+      }
     }
     .user_pic{
       width: 30px;
@@ -24,7 +31,7 @@
       cursor: pointer;
     }
     .user_name{
-      color: #999;
+      //color: #999;
     }
     .dropdown-menu{
       left: auto;

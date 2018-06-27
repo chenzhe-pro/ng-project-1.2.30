@@ -1,0 +1,93 @@
+<!--<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"-->
+<!--"http://www.w3.org/TR/html4/loose.dtd">-->
+<!DOCTYPE html>
+<html xmlns:ng="http://angularjs.org"  >
+<head>
+    <title>后台管理系统</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <!--[if lt IE 8]>
+    <script>
+        alert("您在使用IE低版本浏览器，请使用IE8及以上或者谷歌、360浏览器将会会获得更好的体验");
+        window.location.href = "http://browser.qq.com/";
+    </script>
+    <![endif]-->
+    <link rel="stylesheet" href="../../assets/lib/bootstrap/css/bootstrap.min.css">
+    <!--媒体查询兼容脚本要在css之后引入-->
+    <!--[if lt IE 9]>
+    <script src="../../assets/lib/html5shiv.min.js"></script>
+    <script src="../../assets/lib/respond.min.js"></script>
+    <script >
+        document.createElement('page-head');
+        //        document.createElement('ng-pluralize');
+        //        document.createElement('ng-view');
+    </script>
+
+    <![endif]-->
+    <script src="../../assets/lib/angular-all-jquery.min.js"></script>
+    <script src="../../assets/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../assets/lib/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="../../assets/lib/bootstrap-validator/js/bootstrapValidator.js"></script>
+    <script src="../../assets/lib/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+    <script src="../../assets/lib/bootstrap-treeview.js"></script>
+    <script src="../../assets/lib/placeholder/2.3.1/jquery.placeholder.min.js"></script>
+    <link rel="stylesheet" href="../../assets/lib/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="../../assets/lib/bootstrap-validator/css/bootstrapValidator.css">
+    <link rel="stylesheet" href="../../assets/lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../assets/css/index.css">
+    <style>
+    </style>
+</head>
+<body ng-app="app" id="login" ng-cloak>
+<div ng-controller="login_controller" >
+    <div class="content_content clearfix">
+        <div class="content">
+            <b>请完成以下信息的填写</b>
+            <form id="defaultForm" class="form-horizontal" name="defaultForm" novalidate>
+                <div class="alert alert-success" style="display: none;"></div>
+
+                <div class="form-group">
+                    <label for="username" class="col-sm-3 control-label">Username</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" required ng-maxlength="10" id="username" name="username" ng-model="form.username"/>
+                    </div>
+                    <span ng-show="defaultForm.username.$error.required">不能为空</span>
+                    <span ng-show="defaultForm.username.$dirty">长度不正确</span>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Email address</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" name="email" ng-model="form.mail"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Password</label>
+                    <div class="col-sm-5">
+                        <input type="password" class="form-control" name="password" ng-model="form.password"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Phone</label>
+                    <div class="col-sm-5">
+                        <input type="phone" class="form-control" name="phone" ng-model="form.phone"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-9 col-sm-offset-3">
+                        <button type="submit" class="btn btn-primary" ng-click="submit()">Sign up</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div filter-form></div>
+    </div>
+</div>
+</body>
+<script src="../../assets/lib/quicker-origin.js"></script>
+<script src="../../assets/js/common/common.js"></script>
+<script src="../../assets/js/controler/login/login.js"></script>
+</html>

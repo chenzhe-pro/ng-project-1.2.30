@@ -154,11 +154,14 @@ var serviceFunction=function(){
 };
 
 
-var locationUrl = window.location.host;
-var index_searchData=
-        //"http://192.168.0.56:8080/search/cralwer";
-        "../data/search.json",
-    searchData="http://"+locationUrl;
+var hostName="http://114.55.86.125:8061",//测试打开
+// var hostName=window.location.protocol + "//" + window.location.host+"",//上线打开
+    subProject="/",//测试打开
+    // subProject="/",//上线打开
+    projectPath= hostName+subProject;
+this.projectPath=projectPath;
+// this.appendTagIcon(icon);
+window.common=this;
 $(function(){ $('input, textarea').placeholder(); });
 //分类构建app
 var app,url=window.location.href;
@@ -209,7 +212,7 @@ if(url.indexOf("login.html")<0)
             require:'?',
             scope:true,
             link: function(scope,element,attr){
-                console.log(scope.$index)
+                // console.log(scope.$index)
                 if(scope.$last == true){
                     console.log('ng-repeat执行完毕');
                     // scope.$emit('repeatFinish');
@@ -218,6 +221,9 @@ if(url.indexOf("login.html")<0)
             }
         }
     })
+}else{
+    app=angular.module('app', ['ngSanitize']);
+    app.service("$service",serviceFunction);
 }
 
 
